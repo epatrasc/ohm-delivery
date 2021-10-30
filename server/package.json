@@ -9,17 +9,25 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest ./__test__/",
-    "start": "node ./src/index.js"
+    "test": "jest ./",
+    "test:watch": "jest --watch ./",
+    "start": "node ./src/server.js"
   },
   "author": "Urbantz S.A.",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^10.0.0",
     "express": "^4.17.1",
+    "lodash": "^4.17.21",
     "lowdb": "^1.0.0",
-    "shortid": "^2.2.15"
+    "shortid": "^2.2.16"
   },
   "devDependencies": {
-    "jest": "^26.0.1"
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-jest": "^25.2.2",
+    "jest": "^27.3.1",
+    "supertest": "^6.1.6"
   }
 }
