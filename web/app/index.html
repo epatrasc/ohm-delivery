@@ -1,30 +1,43 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <script src="lib/angular/angular.js"></script>
-        <script src="./main.js"></script>
-        <link rel="stylesheet" type="text/css" href="main.css">
-        <title>Ohm Delivery</title>
-    </head>
-    <body>
-        <div class="banner">
-            <h1>Ohm Delivery</h1>
-            <h2>Get shocked by the power</h2>
-        </div>
-        
-        <div ng-app="ohm-delivery">
-            <form ng-controller="tracking" ng-submit="sendData()">
-                <p>
-                    <input id="tracking" type="text" ng-model="trackingId" placeholder="Enter your tracking id"/>
-                </p>
-                <p>
-                    <button id="formBtn" type="submit">Submit</button>
-                </p>
-                <p>
-                    <span ng-if="errorMessage">{{errorMessage}}</span>
-                </p>
-            </form>
-        </div>
-    </body>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script src="lib/angular/angular.js"></script>
+    <script src="./main.js"></script>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <title>Ohm Delivery</title>
+</head>
+
+<body>
+    <div class="banner">
+        <h1>Ohm Delivery</h1>
+        <h2>Get shocked by the power</h2>
+    </div>
+
+    <div ng-app="ohm-delivery">
+        <form ng-controller="tracking" ng-submit="sendData()">
+            <p>
+                <input id="tracking" ng-change="onedit()" type="text" ng-model="trackingId"
+                    placeholder="Enter your tracking id" />
+            </p>
+            <p>
+                <span ng-if="errorMessage">{{errorMessage}}</span>
+            <div ng-if="ohm" class="card">
+                <div class="header">
+                    <p>STATUS: {{ohm.status}}</p>
+                </div>
+                <div class="container">
+                    <p>Name: {{ohm.client.name}}</p>
+                    <p>Address: {{ohm.client.address}}</p>
+                    <br />
+                    <p>Volt: {{ohm.description.volts}}</p>
+                    <p>Amperes: {{ohm.description.amperes}}</p>
+                </div>
+            </div>
+            </p>
+        </form>
+    </div>
+</body>
+
 </html>

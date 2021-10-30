@@ -1,7 +1,8 @@
 body {
-    margin: 0px 0px 0px 0px;
-    font-size: 16px;
-    font-family: "Open Sans",serif;
+    color      : #222222;
+    margin     : 0px 0px 0px 0px;
+    font-size  : 16px;
+    font-family: "Open Sans", serif;
 }
 
 .banner {
@@ -10,26 +11,48 @@ body {
 
 h1 {
     font-family: Arial, sans-serif;
-    margin: 0 auto;
+    margin     : 0 auto;
     padding-top: 10px;
-    text-align: center;
+    text-align : center;
 }
 
 h2 {
-    font-family: Arial, sans-serif;
-    margin: 0 auto;
-    padding-top: 0px;
+    font-family   : Arial, sans-serif;
+    margin        : 0 auto;
+    padding-top   : 0px;
     padding-bottom: 10px;
-    text-align: center;
-    font-style: italic;
+    text-align    : center;
+    font-style    : italic;
 }
 
 input {
     margin: 2em auto 1em;
-    width: 50%;
+    width : 50%;
 }
+
 p {
-    text-align: center;
-    margin: auto;
+    text-align : center;
+    margin     : auto;
     line-height: 2.0;
+}
+
+/* custom style */
+.card {
+    width         : 30%;
+    display       : flex;
+    flex-direction: column;
+    border        : 1px dodgerblue solid;
+    margin        : auto;
+}
+
+.header {
+    height     : 30%;
+    background : dodgerblue;
+    color      : #222222;
+    font-weight: bold;
+    text-align : center;
+}
+
+.container {
+    padding: 2px 16px;
 }
