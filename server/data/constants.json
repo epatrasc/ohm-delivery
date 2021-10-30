@@ -1,0 +1,10 @@
+{
+  "valid_statuses": [
+    "CREATED",
+    "PREPARING",
+    "READY",
+    "IN_DELIVERY",
+    "DELIVERED",
+    "REFUSED"
+  ]
+}
